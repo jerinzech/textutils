@@ -85,4 +85,4 @@ export default function NavBar(props) {
   );
 }
 
-NavBar.propTypes = { title: PropTypes.string };
+NavBar.propTypes = { title: PropTypes.string.isRequired };
