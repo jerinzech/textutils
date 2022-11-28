@@ -21,18 +21,18 @@ export default function NavBar(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+            {/* <ul className="navbar-nav me-auto mb-2 mb-lg-0"> */}
+            {/* <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
-              </li>
-              <li className="nav-item">
+              </li> */}
+            {/* <li className="nav-item">
                 <a className="nav-link active" href="/">
                   About
                 </a>
-              </li>
-              {/* <li className="nav-item dropdown">
+              </li> */}
+            {/* <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -66,7 +66,7 @@ export default function NavBar(props) {
               <li className="nav-item">
                 <a className="nav-link disabled">Disabled</a>
               </li> */}
-            </ul>
+            {/* </ul> */}
             {/* <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
@@ -78,6 +78,19 @@ export default function NavBar(props) {
                 Search
               </button>
             </form> */}
+
+            <div className="form-check form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                onClick="themeCheck"
+              />
+              <label className="form-check-label" for="flexSwitchCheckDefault">
+                Light Mode
+              </label>
+            </div>
           </div>
         </div>
       </nav>

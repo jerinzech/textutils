@@ -13,22 +13,24 @@ export default function TextForm(props) {
   };
   const handleClear = () => {
     setText("");
+    document.getElementById("myBox").value = "";
   };
   const handleOnChange = (event) => {
     setText(event.target.value);
+    // textarea.value = "";
   };
   return (
     <>
       <div className="container">
         <div className="mb-3">
           {/* <label for="myBox" className="form-label"> */}
-          <h2>{props.heading}</h2>
+          <h3>{props.heading}</h3>
           {/* </label>  */}
           <textarea
             className="form-control"
             id="myBox"
             rows="6"
-            value={text}
+            // value={text}
             onChange={handleOnChange}
           ></textarea>
         </div>
@@ -41,6 +43,18 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-2" onClick={handleClear}>
           Clear
         </button>
+      </div>
+      <div className="container my-3">
+        <p>
+          {text.split(" ").length} words | {text.length} characters
+        </p>
+        <p>{0.008 * text.split(" ").length} minutes to read</p>
+      </div>
+      <div className="container">
+        <h3>Preview</h3>
+        <p className="preview-para" onChange={handleOnChange}>
+          {text}
+        </p>
       </div>
     </>
   );
